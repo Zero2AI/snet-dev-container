@@ -1,4 +1,5 @@
 {
   "name": "SNET Dev Container",
-  "image": "ghcr.io/zero2ai/snetdevcontainer:3001251346"
+  "image": "ghcr.io/zero2ai/snetdevcontainer:3001251346",
+  "postCreateCommand": "sh snetsdk.sh"
 }
