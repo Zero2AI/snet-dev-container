@@ -17,5 +17,7 @@ RUN wget https://github.com/singnet/snet-daemon/releases/download/v5.1.6/snetd-l
 
 RUN chmod +x /usr/bin/snetd
 
+CMD rm -rf Dockerfile .devcontainer README.md .gitignore
+
 #CMD /home/run-snetdservice.sh
 #ENTRYPOINT ["/bin/bash", "-c"]
