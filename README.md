@@ -11,7 +11,7 @@ Click on Create.
 
 Select Git Repo.
 
-Enter your GitHub repository URL (e.g., https://github.com/org_name/REPO1).
+Enter your GitHub repository URL https://github.com/Zero2AI/snet-dev-container.
 
 Choose Docker as the provider.
 
