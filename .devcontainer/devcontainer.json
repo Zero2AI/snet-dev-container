@@ -1,5 +1,4 @@
 {
   "name": "SNET Dev Container",
-  "image": "ghcr.io/zero2ai/snetdevcontainer:3001251346", 
-  "postCreateCommand": "chmod +x $HOME/snetsdk-setup.sh && $HOME/./snetsdk-setup.sh"
+  "image": "ghcr.io/zero2ai/snetdevcontainer:3001251346"
 }
