@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e  # Exit immediately if any command fails
+set -eux  # Exit immediately if any command fails
 
 # Ensure pip is updated
 
