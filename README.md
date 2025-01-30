@@ -1,7 +1,11 @@
 # sent-dev-container
-prebuild sent development container
+## Prebuild SNET Development Container
 
-InstallDevPod in your local machine
+### Install DevPod in your local machine
+
+Open DevPod
+
+Click on Workspace
 
 Click on Create
 
