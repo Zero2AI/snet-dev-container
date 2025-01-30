@@ -1,5 +1,5 @@
 {
   "name": "SNET Dev Container",
   "image": "ghcr.io/zero2ai/snetdevcontainer:3001251346",
-  "postStartCommand": "dos2unix snetsdk.sh && bash snetsdk.sh"
+  "postStartCommand": "apt install dos2unix && dos2unix snetsdk.sh && bash snetsdk.sh"
 }
