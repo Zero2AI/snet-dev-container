@@ -3,7 +3,7 @@ FROM python:3.11
 # Install required dependencies
 RUN apt update \
     && apt-get install -y vim git wget curl \
-    && apt-get install -y libudev-dev libusb-1.0-0-dev
+    && apt-get install -y libudev-dev libusb-1.0-0-dev dos2unix
 
 # Ensure shell commands use Bash
 SHELL ["/bin/bash", "--login", "-c"]
@@ -16,14 +16,14 @@ RUN wget https://github.com/singnet/snet-daemon/releases/download/v5.1.6/snetd-l
     && chmod +x /usr/bin/snetd
 
 # Set working directory
-WORKDIR /home
+#WORKDIR /home
 
 # Copy the setup script into the container and make it executable
-COPY snetsdk.sh /home/snetsdk.sh
-RUN chmod +x /home/snetsdk.sh
+#COPY snetsdk.sh /home/snetsdk.sh
+#RUN dos2unix /home/snetsdk.sh && chmod +x /home/snetsdk.sh
 
 # Ensure the script runs correctly
-CMD ["/bin/bash", "snetsdk.sh"]
+#CMD ["/bin/bash", "snetsdk.sh"]
 
 #CMD /home/run-snetdservice.sh
 #ENTRYPOINT ["/bin/bash", "-c"]
