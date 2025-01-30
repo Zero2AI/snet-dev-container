@@ -1,23 +1,29 @@
 FROM python:3.11
 
+# Install required dependencies
 RUN apt update \
-         && apt-get install -y vim git wget curl
+    && apt-get install -y vim git wget curl \
+    && apt-get install -y libudev-dev libusb-1.0-0-dev
 
-# Make RUN commands use \`bash --login\`:  
-#SHELL ["/bin/bash", "--login", "-c"]
+# Ensure shell commands use Bash
+SHELL ["/bin/bash", "--login", "-c"]
 
-WORKDIR /home
-
-RUN apt-get install libudev-dev libusb-1.0-0-dev -y
-#RUN pip install web3 gradio gradio_client==0.15.1 grpcio grpcio-tools
-
+# Install required Python packages
 RUN pip install snet.cli
 
-RUN wget https://github.com/singnet/snet-daemon/releases/download/v5.1.6/snetd-linux-amd64-v5.1.6 -O /usr/bin/snetd
+# Download and set up snetd
+RUN wget https://github.com/singnet/snet-daemon/releases/download/v5.1.6/snetd-linux-amd64-v5.1.6 -O /usr/bin/snetd \
+    && chmod +x /usr/bin/snetd
 
-RUN chmod +x /usr/bin/snetd
+# Set working directory
+WORKDIR /home
 
-CMD rm -rf Dockerfile README.md .gitignore
+# Copy the setup script into the container and make it executable
+COPY snetsdk.sh /home/snetsdk.sh
+RUN chmod +x /home/snetsdk.sh
+
+# Ensure the script runs correctly
+CMD ["/bin/bash", "snetsdk.sh"]
 
 #CMD /home/run-snetdservice.sh
 #ENTRYPOINT ["/bin/bash", "-c"]
