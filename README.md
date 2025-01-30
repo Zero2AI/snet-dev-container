@@ -1,22 +1,22 @@
-# sent-dev-container
-## Prebuild SNET Development Container
+# SNET Dev Container
+## Prebuilt SNET Development Environment
 
-### Install DevPod in your local machine
+### Installing DevPod on Your Local Machine
 
-Open DevPod
+Open DevPod.
 
-Click on Workspace
+Click on Workspace.
 
-Click on Create
+Click on Create.
 
-Click on Git Repo
+Select Git Repo.
 
-enter your Github repo (Example: https://github.com/org_name/REPO1)
+Enter your GitHub repository URL (e.g., https://github.com/org_name/REPO1).
 
-Click on provider Docker
+Choose Docker as the provider.
 
-Click on VS Code icon -- make sure VS Code is installed on your local machine.
+Click on the VS Code icon (ensure that VS Code is installed on your local machine).
 
-Click on Create Workspace
+Click Create Workspace.
 
-The Container will start on VS Code, open VS Code terminal and start work :)
+Once the container starts in VS Code, open the VS Code terminal and begin working! 🚀
