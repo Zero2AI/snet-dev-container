@@ -4,7 +4,7 @@ RUN apt update \
          && apt-get install -y vim git wget curl
 
 # Make RUN commands use \`bash --login\`:  
-SHELL ["/bin/bash", "--login", "-c"]
+#SHELL ["/bin/bash", "--login", "-c"]
 
 WORKDIR /home
 

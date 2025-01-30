@@ -1,8 +1,5 @@
 #!/bin/bash
-set -eux  # Exit immediately if any command fails
-
-# Ensure pip is updated
-
+set -e
 pip install --upgrade pip
 
 # Clone the repository if it doesn’t exist
