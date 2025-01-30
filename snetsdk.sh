@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-pip install --upgrade pip
+#pip install --upgrade pip
 if [ ! -d "snet-sdk-python" ]; then
     git clone --branch v3.6.1 https://github.com/singnet/snet-sdk-python.git
 else
