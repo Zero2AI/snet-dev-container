@@ -31,3 +31,8 @@ root@d923486d6bf9:/workspaces/snet-dev-container# nohup: appending output to 'no
 Press enter once above line appear.
 
 Open web browser and type 127.0.0.1:7861 and enjoy the R1Storm chatbot application! 🚀
+
+### Create SNET New Organisation
+on # prompt run following.
+./snetcli-orgid
+Enter new Organization name and press enter. 🚀
