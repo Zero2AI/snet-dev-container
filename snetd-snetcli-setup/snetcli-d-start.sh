@@ -11,7 +11,7 @@
 #       ORG_ID="myorgid"
 #       PROTO_BRANCH="mybranch"
 #    (No spaces around '=' recommended)
-if [ ! -f "input.txt" ]; then
+if [ ! -f "id_input.txt" ]; then
   echo "ERROR: input.txt not found. Please create input.txt with ORG, ORG_ID, and PROTO_BRANCH."
   exit 1
 fi
