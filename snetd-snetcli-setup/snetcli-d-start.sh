@@ -37,6 +37,9 @@ echo "Creating OrganizationID '${ORG_ID}'"
 # Create an identity (change key if needed)
 snet identity create --private-key 6b7369a54b9c41a991e8d420c447cffe507cd73ca7ee12484d82313a7f975369 FIRST key --network sepolia 2>/dev/null
 
+# add latest sepholia infura key
+sed -i 's|https://sepolia.infura.io/v3/09027f4a13e841d48dbfefc67e7685d5|https://sepolia.infura.io/v3/37ab1531f69a402fbb84ae725248ec60|g' /root/.snet/config
+
 # Initialize org metadata
 snet organization metadata-init "$ORG" "$ORG_ID" individual 2>/dev/null
 
