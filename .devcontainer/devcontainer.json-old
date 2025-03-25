@@ -1,6 +1,0 @@
-{
-  "name": "SNET Dev Container",
-  "image": "ghcr.io/zero2ai/snetdevcontainer:3001251346",
-  "postStartCommand": "apt install dos2unix && dos2unix snetsdk.sh && dos2unix snetd-snetcli-setup/snetcli-d-start.sh && pip install snet-cli==2.1.2 && bash snetsdk.sh && cd r1storm && pip install -r requirements.txt",
-  "forwardPorts": ["9001:7860", "9002:8010"]
-}
