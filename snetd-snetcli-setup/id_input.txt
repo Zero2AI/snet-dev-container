@@ -1,3 +1,0 @@
-ORG="z2aitest1"
-ORG_ID="z2aitest1id"
-PROTO_BRANCH="ocr2txt"
